@@ -68,7 +68,7 @@
 </ul>
 
 📦 Instalación
-Siga estos pasos para obtener el proyecto en su máquina:
+Seguir estos pasos para obtener el proyecto en su máquina:
 <ol>
 	<li>
 		Clonar el repositorio:
@@ -77,8 +77,8 @@ Siga estos pasos para obtener el proyecto en su máquina:
 	</li>
 	<li>
 		Instalar dependencias de PHP:
-		Navegue al directorio del proyecto y ejecute Composer para instalar todas las dependencias de Laravel:
-		cd prueba_tecnica_php
+		Navegar al directorio del proyecto y ejecutar Composer para instalar todas las dependencias de Laravel:
+		cd c:/xampp/htdocs/prueba_tecnica_php
 		composer install
 	</li>
 	<li>
@@ -142,7 +142,7 @@ Para iniciar el servidor de desarrollo de Laravel y comenzar a usar la API:
 			Para acceder a las rutas protegidas, debe primero autenticarse para obtener un Bearer Token.
 		</li>
 		<li>
-			Utilice una herramienta como Postman o Insomnia para probar los endpoints.
+			Utilice una herramienta como Postman para probar los endpoints.
 		</li>
 		<li>
 			El token obtenido debe ser enviado en el encabezado de las solicitudes HTTP de la siguiente manera:
