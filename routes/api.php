@@ -24,5 +24,6 @@ Route::middleware('auth:sanctum', 'check.token.expiration')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::resource('/tasks', TaskController::class);
     Route::get('/tasks', [TaskController::class, 'listing']);
+    Route::get('/user-tasks', [TaskController::class, 'listingNotPaginate']);
     Route::get('/tasks/{id}/weather', [TaskController::class, 'showWeather']);
 });

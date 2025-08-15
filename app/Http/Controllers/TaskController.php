@@ -11,14 +11,30 @@ use Exception;
 
 class TaskController extends Controller
 {
-    public function listing()
+    public function listingNotPaginate()
     {
         $user = Auth::user();
-        $task = Task::where('user_id', $user->id)->paginate(5);
+        $tasks = Task::where('user_id', $user->id)->get();
+
+        if($tasks && count($tasks) > 0) {
+            foreach ($tasks as $task) {
+                $task->synced = true;
+            }
+        }
 
         return response()->json([
             'success' => true,
-            'data' => $task
+            'data' => $tasks
+        ], 200);
+    }
+    public function listing()
+    {
+        $user = Auth::user();
+        $tasks = Task::where('user_id', $user->id)->paginate(5);
+
+        return response()->json([
+            'success' => true,
+            'data' => $tasks
         ], 200);
     }
 
